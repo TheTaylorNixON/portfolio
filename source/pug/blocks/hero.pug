@@ -1,0 +1,38 @@
+mixin socials(items)
+    ul.header__socials
+        each link, item in items
+            li.socials__item
+                a(class=`socials__link socials__link--${item}`, href=`${link}`)
+                    svg(class=`socials__link__svg socials__link__svg--${item}`)
+                        use(xlink:href=`./assets/images/sprite.svg#icons--${item}`)
+
+mixin socials-index(items)
+    ul.header__socials.header__socials--index
+        each link, item in items
+            li.socials__item.socials__item--index
+                a(class=`socials__link socials__link--${item} socials__link--index`, href=`${link}`)
+                    svg(class=`socials__link__svg socials__link__svg--${item} socials__link__svg--index`)
+                        use(xlink:href=`./assets/images/sprite.svg#icons--${item}`)
+
+mixin hamburger()
+    a.hamburger.js-hamburger#hamburger
+        .hamburger__stick.hamburger__stick--top
+        .hamburger__stick.hamburger__stick--middle
+        .hamburger__stick.hamburger__stick--bottom
+
+mixin hero()
+    section.hero
+        .hero__bg
+            img(src="./assets/images/bg-main.jpg", alt="bg-main")
+        .hero__header
+            .hero__header__left
+                +socials({vk:'https://vk.com/', github:'https://github.com/TheTaylorNixON', in:'https://github.com/TheTaylorNixON'})
+            .hero__header__right
+                +hamburger()
+        .hero__user
+            .hero__person
+                .hero__person__pic 
+                h1.hero__person__name Артем Бочкарев
+                p.hero__person__info Личный сайт веб разработчика
+        svg.hero__down-arrow-icon.arrow#arrow
+            use(xlink:href="./assets/images/sprite.svg#icons--arrow_down")

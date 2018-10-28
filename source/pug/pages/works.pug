@@ -1,0 +1,88 @@
+extends ../_template.pug
+
+block content
+    .wrapper
+        +hero()
+        section.works.js-section
+            +triangle-left('works-triangles')
+            +triangle-right('works-triangles')
+            .works__title Мои работы
+            .main-container
+                .works__content#slider
+                    .works__content__left
+                        .content__left-title 
+                            h4.js-slider-subtitle MY WEBSITE
+                        p.content__left-text.js-slider-tehnologes HTML5, CSS3, PUG, SASS, JAVASCRIPT, JQUERY
+                        a.content__left-button.js-slider-site(href="https://github.com/TheTaylorNixON/project-portfolio", target="_blank")
+                            p Посмотреть сайт
+                    .works__content__right
+                        .works__content__display.js-slider-display
+                            img.slider__image.js-slider-display-img(src='assets/images/works.jpg', alt='work-image')
+                        .works__content__buttons            
+                            a.slider-list__link.js-slider-bth--left.slider-list__link--left
+                                ul.slider-list__list.js-slider-list
+                                    li.slider-list__item.js-slider-item(data-title='my website', data-skills='HTML5, CSS3, PUG, SASS, JAVASCRIPT, JQUERY, GULP, NPM', data-link='https://github.com/TheTaylorNixON/project-portfolio')
+                                        img.c-slider-list__image(src='./assets/images/works.jpg', alt='resume')
+                                    li.slider-list__item.js-slider-item(data-title='Avito parser', data-skills='HTML5, CSS3, JAVASCRIPT, JQUERY, AJAX, PYTHON, FLASK', data-link='https://github.com/TheTaylorNixON/avito-parser')
+                                        img.c-slider-list__image(src='./assets/images/works2.jpg', alt='Avito parser')
+                                    li.slider-list__item.js-slider-item(data-title='Workadium', data-skills='HTML5, CSS3', data-link='https://github.com/TheTaylorNixON/workadium')
+                                        img.c-slider-list__image(src='./assets/images/works3.jpg', alt='Workadium')
+                                    li.slider-list__item.js-slider-item.active(data-title='Battleship game', data-skills='HTML5, CSS3, JAVASCRIPT', data-link='https://github.com/TheTaylorNixON/battleship')
+                                        img.c-slider-list__image(src='./assets/images/works4.jpg', alt='Battleship')
+                                .slider-arrow.slider-arrow--down
+                                    svg.slider-arrow-svg
+                                        use(xlink:href="./assets/images/sprite.svg#icons--works-down-arrow")                                    
+                            a.slider-list__link.js-slider-bth--right.slider-list__link--right
+                                ul.slider-list__list.js-slider-list
+                                    li.slider-list__item.js-slider-item(data-title='my website', data-skills='HTML5, CSS3, PUG, SASS, JAVASCRIPT, JQUERY, GULP, NPM', data-link='https://github.com/TheTaylorNixON/project-portfolio')
+                                        img.c-slider-list__image(src='./assets/images/works.jpg', alt='resume')
+                                    li.slider-list__item.js-slider-item.active(data-title='Avito parser', data-skills='HTML5, CSS3, JAVASCRIPT, JQUERY, AJAX, PYTHON, FLASK', data-link='https://github.com/TheTaylorNixON/avito-parser')
+                                        img.c-slider-list__image(src='./assets/images/works2.jpg', alt='Avito parser')
+                                    li.slider-list__item.js-slider-item(data-title='Workadium', data-skills='HTML5, CSS3', data-link='https://github.com/TheTaylorNixON/workadium')
+                                        img.c-slider-list__image(src='./assets/images/works3.jpg', alt='Workadium')
+                                    li.slider-list__item.js-slider-item(data-title='Battleship game', data-skills='HTML5, CSS3, JAVASCRIPT', data-link='https://github.com/TheTaylorNixON/battleship')
+                                        img.c-slider-list__image(src='./assets/images/works4.jpg', alt='Battleship')
+                                .slider-arrow.slider-arrow--up
+                                    svg.slider-arrow-svg
+                                        use(xlink:href="./assets/images/sprite.svg#icons--works-up-arrow")
+        section.reviews
+            .main-container--column
+                .reviews__wrap
+                    .works__title Что обо мне <br >говорят
+                    ul.reviews-list
+                        li.reviews-list__item
+                            .item__pic
+                                img(src="./assets/images/review1.jpg", alt="").item__pic__img
+                            .item__text Этот код выдержит любые испытания. Только <br> пожалуйста, не загружается сайт на слишком <br> старых браузерах!
+                            .item__name  Фамилия Имя
+                            .item__profession — специальность
+                        li.reviews-list__item
+                            .item__pic
+                                img(src="./assets/images/review2.jpg", alt="").item__pic__img
+                            .item__text Этот код выдержит любые испытания. Только <br> пожалуйста, не загружается сайт на слишком <br> старых браузерах!
+                            .item__name Фамилия Имя
+                            .item__profession — специальность
+                        li.reviews-list__item
+                            .item__pic
+                                img(src="./assets/images/review2.jpg", alt="").item__pic__img
+                            .item__text Этот код выдержит любые испытания. Только <br> пожалуйста, не загружается сайт на слишком <br> старых браузерах!
+                            .item__name Фамилия Имя
+                            .item__profession — специальность
+                .reviews__background
+                    img(src="./assets/images/works-reviews.jpg", alt="" class="works-reviews-img")
+                    form(action="contact" method="POST" class="feedback-wrapper")
+                        .feedback
+                            .feedback__title.about__title Связаться со мной
+                            .feedback__form
+                                .feedback__form__item
+                                    label(for="").feedback__form__label.feedback__form__label--top
+                                        input(type="text" placeholder="Имя" name="name").feedback__form__input
+                                    label(for="").feedback__form__label
+                                        input(type="email" placeholder="Email" name="email").feedback__form__input
+                                    label(for="").feedback__form__label
+                                        textarea(name="text" placeholder="Ваше сообщение" required).feedback__form__textarea
+                        .feedback-buttons
+                            input(type="submit" value="Отправить").feedback-button.feedback-buttons__submit
+                            input(type="reset" value="Очистить").feedback-button.feedback-buttons__reset
+        +footer()
+    script(src="./assets/js/slider.js")

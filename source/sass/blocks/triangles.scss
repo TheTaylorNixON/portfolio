@@ -1,0 +1,33 @@
+.triangle {
+    &-left {
+        height: 150px;
+        width: 50%;
+        position: absolute;
+        bottom: 99.9%;
+        left: 0;
+    }
+    &-right {
+        height: 150px;
+        width: 50%;
+        position: absolute;
+        bottom: 99.9%;
+        right: 0;
+    }
+}
+
+.about-triangles {
+    &--left {
+        fill: $gray;
+    }
+    &--right {
+        fill: $beige;
+    }
+}
+
+.works-triangles {
+    fill: #f8f9f5;
+}
+
+.blog-triangle {
+    fill: #faf8f0;
+}

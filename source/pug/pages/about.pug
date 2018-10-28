@@ -1,0 +1,76 @@
+extends ../_template.pug
+
+block content
+    .wrapper
+        +hero()
+        section.about.js-section.animate
+            +triangle-left('about-triangles--left', 'about-triangles')
+            +triangle-right('about-triangles--right', 'about-triangles')
+            .main-container
+                .about__col.about__col--left            
+                    .about__main-title Обо мне
+                    .about__pic                    
+                    .about__title Кто я
+                    .about__text Я веб разработчик из Краснодара. Мне 25 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Чуть позже я напишу "backend" для этого сайта, освежу в нём контент и буду использовать как свой блог.
+                .about__col.about__col--right
+                    .about__title Чем я могу быть вам <br> полезен
+                    .about__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                    ul.skills-group#skills
+                        li.skills-group__item
+                            h5.skills-group__title Frontend
+                            ul.skills-list
+                                each skill in ['HTML5', 'CSS3', 'JavaScript', 'jQuery']
+                                    li.skills-list__item
+                                        .skill
+                                            svg(class="skill__circle")
+                                                circle(class="skill__circle__under" cx="50%" cy="50%" r="40")
+                                                circle(class=`skill__circle__above skill__circle__above--${skill}` cx="50%" cy="50%" r="50" transform="rotate(-90 60 60)")
+                                            h6.skill__title=skill
+                        li.skills-group__item
+                            h5.skills-group__title Backend
+                            ul.skills-list
+                                each skill in ['Python', 'mySQL', 'Flask']
+                                    li.skills-list__item
+                                        .skill
+                                            svg(class="skill__circle")
+                                                circle(class="skill__circle__under" cx="50%" cy="50%" r="40")
+                                                circle(class=`skill__circle__above skill__circle__above--${skill}` cx="50%" cy="50%" r="50" transform="rotate(-90 60 60)")
+                                            h6.skill__title=skill
+                        li.skills-group__item
+                            h5.skills-group__title WorkFlow
+                            ul.skills-list
+                                each skill in ['Gulp', 'npm', 'Sass', 'Pug']
+                                    li.skills-list__item
+                                        .skill
+                                            svg(class="skill__circle")
+                                                circle(class="skill__circle__under" cx="50%" cy="50%" r="40")
+                                                circle(class=`skill__circle__above skill__circle__above--${skill}` cx="50%" cy="50%" r="50" transform="rotate(-90 60 60)")
+                                            h6.skill__title=skill
+        section.section-map
+            .map#map
+            .contacts
+                .contacts-title Контакты
+                ul.contacts-list
+                    li.contacts-list__item
+                        a(href="skype:skype_kdn")
+                            svg(class="contacts-list__item__svg contacts-list__item__svg--skype")
+                                use(xlink:href="./assets/images/sprite.svg#icons--skype")
+                            p skype_kdn
+                    li.contacts-list__item
+                        a(href="mailto:bochkarevtrade@gmail.com")
+                            svg(class="contacts-list__item__svg contacts-list__item__svg--envelope")
+                                use(xlink:href="./assets/images/sprite.svg#icons--envelope")
+                            p bochkarevtrade@gmail.com
+                    li.contacts-list__item
+                        a(href="tel:89883814296")
+                            svg(class="contacts-list__item__svg contacts-list__item__svg--phone")
+                                use(xlink:href="./assets/images/sprite.svg#icons--phone")
+                            p +7 988 381 42 96
+                    li.contacts-list__item 
+                        a
+                            svg(class="contacts-list__item__svg contacts-list__item__svg--map_marker")
+                                use(xlink:href="./assets/images/sprite.svg#icons--map_marker")
+                            p Краснодар
+        +footer('about')    
+    script(src="./assets/js/about-skills.js")    
+    script(src="./assets/js/map.js")

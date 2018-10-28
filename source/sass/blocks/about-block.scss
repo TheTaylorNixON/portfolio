@@ -1,0 +1,28 @@
+.about {
+    display: flex;
+    position: relative;
+}
+
+.about__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    padding-top: 50px;
+    &--left {
+        background: $gray;
+        width: 50%;
+    }
+    &--right {
+        background: $beige;
+        width: 50%;
+    }
+}
+
+.about__pic {
+    background: url(../images/face-about.jpg) no-repeat center 0/cover;
+    width: 443px;
+    height: 391px;
+    margin-top: 32px;
+}

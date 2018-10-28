@@ -1,0 +1,16 @@
+mixin hero-pages(heroTitle, heroInfo)
+    section.hero
+        .hero__bg
+            img(src="./assets/images/bg-main.jpg", alt="bg-main")
+        .hero__header
+            .hero__header__left
+                +socials({vk:'https://vk.com/', github:'https://github.com/TheTaylorNixON', in:'https://github.com/TheTaylorNixON'})
+            .hero__header__right
+                +hamburger()
+        .hero__user
+            .hero__person
+                .hero__person__pic 
+                h2.hero__title=`${heroTitle}`
+                p.hero__info=`${heroInfo}`
+        svg.hero__down-arrow-icon.arrow#arrow
+            use(xlink:href="./assets/images/sprite.svg#icons--arrow_down")

@@ -1,0 +1,58 @@
+.about__main-title {
+    color: #373e42;
+    @include sansus();
+    font-size: 63px;
+    text-transform: uppercase;
+    letter-spacing: 1.57px;
+    padding: 30px 0;
+    position: relative;
+    @include main-title-line;
+}
+
+.about__title {
+    color: $main-color;
+    @include sansus();
+    font-size: 35px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 29px 0;
+    text-align: center;
+    @include title-line;
+}
+
+.about__text {
+    width: 542px;
+    color: $main-color;
+    font-size: 16px;
+    line-height: 24.01px;
+    margin-top: 29px;
+    text-align: justify;
+    @include justify;
+}
+
+
+
+.works__title {
+    color: #373e42;
+    font-family: "Sansus Webissimo";
+    font-size: 63px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 35px;
+    @include main-title-line;
+}
+
+.content__left-title {
+    color: #566358;
+    font-family: "Sansus Webissimo";
+    font-size: 35px;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    padding-bottom: 29px;
+    margin-bottom: 26px;
+    @include title-line;
+    & h4 {
+        width: 350px;
+    }
+}

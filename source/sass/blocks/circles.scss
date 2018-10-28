@@ -1,0 +1,189 @@
+.skill__circle {
+    width: 120px;
+    height: 120px;
+    display: block;
+    fill: transparent;
+    stroke-width: 20;
+    & .skill__circle__under {
+        stroke: #dfdcd5;
+    }
+    & .skill__circle__above {
+        stroke: #6c9c5a;
+    }
+}
+
+.skills-group {
+    width: 542px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-group__title {
+    color: #566358;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill {
+    position: relative;
+    // margin: 0 15px 30px 0;
+    margin-bottom: 30px;
+}
+.skill__title {
+    position: absolute;
+    @include centered;
+    margin: 0;
+    text-align: center;
+    color: #4e8839;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 14.7px;
+}
+
+.skill__circle__above {
+    transition: all 1s;
+    opacity: .8;
+    stroke-dasharray: 0 360;
+}
+
+.skills-list__item.active {
+    .skill__circle__above {
+        &--HTML5 {
+            animation: html 2s ease forwards;
+            animation-delay: .3s;
+        }
+        &--CSS3 {
+            animation: css 2s ease forwards;
+            animation-delay: .3s;
+        }
+        &--JavaScript {
+            animation: js 2s ease forwards;
+            animation-delay: .6s;
+        }
+        &--jQuery {
+            animation: jquery 2s ease forwards;
+            animation-delay: .9s;
+        }
+        &--Python {
+            animation: Python 2s ease forwards;
+        }
+        &--mySQL {
+            animation: mySQL 2s ease forwards;
+            animation-delay: .3s;
+        }
+        &--Flask {
+            animation: Flask 2s ease forwards;
+            animation-delay: .6s;
+        }
+        &--Gulp {
+            animation: Gulp 2s ease forwards;
+        }
+        &--npm {
+            animation: npm 2s ease forwards;
+            animation-delay: .3s;
+        }
+        &--Sass {
+            animation: Sass 2s ease forwards;
+            animation-delay: .6s;
+        }
+        &--Pug {
+            animation: Pug 2s ease forwards;
+            animation-delay: .9s;
+        }
+    }
+}
+
+@keyframes html {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 250 260;
+  }
+}
+@keyframes css {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 250 360;
+  }
+}
+@keyframes js {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 190 360;
+  }
+}
+@keyframes jquery {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 190 360;
+  }
+}
+@keyframes Python {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 200 360;
+  }
+}
+@keyframes mySQL {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 120 360;
+  }
+}
+@keyframes Flask {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 170 360;
+  }
+}
+@keyframes Gulp {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 120 360;
+  }
+}
+@keyframes npm {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 120 360;
+  }
+}
+@keyframes Sass {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 220 360;
+  }
+}
+@keyframes Pug {
+  from {
+    stroke-dasharray: 0 360;
+  }
+  to {
+    stroke-dasharray: 220 360;
+  }
+}

@@ -1,0 +1,169 @@
+.hero {
+    min-height: 700px;
+    overflow: hidden;
+    position: relative;
+    img {
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
+.hero__user {
+    @include centered(y);
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.hero__bg {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    // min-height: 800px;
+    height: 125%;
+}
+
+.hero__header {
+    position: absolute;
+    width: 100%;
+}
+
+.hero__person__pic {
+    background: url(../images/face.jpg) no-repeat center 0/cover;
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.hero__person__name {
+    color: #ffffff;
+    font-size: 35px;
+}
+
+.hero__person__info {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+
+// styles for hero-pages.pug:
+.hero__title {
+    position: relative;
+    padding-bottom: 30px;
+    color: #ffffff;
+    font-family: "Sansus Webissimo";
+    font-size: 63px;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 1.57px;
+    @include main-title-line(wh);
+}
+
+.hero__info {
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+// for socials
+.header__socials {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.socials__item {
+    margin-left: 30px;
+    & a {
+        display: inline-block;
+    }
+}
+
+.socials__link__svg {
+    transition: all .5s;
+    fill: #ffffff;
+    &:hover {
+        fill: #6c9c5a;
+    }
+    &--vk {
+        width: 31px;
+        height: 17px;        
+    }
+    &--github {
+        width: 26px;
+        height: 22px;
+    }
+    &--in {
+        width: 24px;
+        height: 22px;
+    }
+}
+
+.header__socials--index {
+    justify-content: center;
+    margin: 0 0 40px 0;
+}
+
+.socials__item--index {
+    margin: 0 30px 0 0;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.socials__link__svg--index {
+    fill: rgba(255, 255, 255, 0.5);
+    &:hover {
+        fill: rgba(78, 136, 57, 1);
+    }
+}
+
+// for humburger
+.hero__header__right {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 111;
+    &:hover {
+        .hamburger__stick {
+            background-color: #6c9c5a;
+            transition: all .3s;
+        }
+    }
+    &.active {
+        opacity: 1;
+        .hamburger__stick {
+            background-color: #ffffff;
+        }
+        .hamburger__stick--top {
+            transition: all .5s;
+            transform: translateY(15px) translateX(0) rotate(45deg);
+        }
+        .hamburger__stick--middle {
+            opacity: 0;
+        }
+        .hamburger__stick--bottom {
+            transition: all .5s;
+            transform: translateY(-15px) translateX(0) rotate(-45deg);
+        }
+    }
+}
+
+.hamburger__stick {
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}

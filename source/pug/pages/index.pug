@@ -1,0 +1,19 @@
+extends ../_template.pug
+
+block content
+    .welcome-wrapper
+        .background
+            //- img(src="./assets/images/bg-main.jpg", alt="").background-image
+            form(action="").authorization
+                .authorization__info
+                    .authorization__info__pic
+                        img(src="./assets/images/face.jpg", alt="").authorization__info__img
+                    h2.authorization__info__name Артем Бочкарев
+                    p.authorization__info__info Личный сайт веб разработчика
+                    +socials-index({vk:'https://vk.com/id69871135', github:'https://github.com/TheTaylorNixON', in:'https://github.com/TheTaylorNixON'})
+                .authorization__buttons
+                    a(href="./works.html").authorization__button.authorization__button--border Мои работы
+                    a(href="./about.html").authorization__button.authorization__button--border Обо мне
+                    a(href="./blog.html").authorization__button Блог
+            a(href="").authorization__title Авторизоваться
+    script(src="./assets/js/index-bg.js")

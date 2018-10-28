@@ -1,0 +1,31 @@
+include ./blocks/footer
+include ./blocks/hero
+include ./blocks/hero-pages
+include ./blocks/triangle-left
+include ./blocks/triangle-right
+include ./blocks/preloader
+include ./blocks/hamburger-navigation
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    title TYLOR-NIXON|Личный сайт веб-разработчика
+    meta(content="Bochkarev Artem" name="author")
+    meta(content="TYLOR-NIXON|Portfolio of web-developer Bochkarev Artem" name="description")
+    meta(content="website of web-developer Bochkarev Artem, front-ent, portfolio, resume" name="keywords")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //- meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    link(sizes="16x16" href="./assets/images/favicon.png" rel="icon" type="image/png")
+    link(rel='stylesheet' href='./assets/css/foundation.css')
+    link(rel='stylesheet' href='./assets/css/app.css')
+  body
+    +preloader()
+    +hamburger-navigation()
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    block content
+    script(src="./assets/js/preloader.js")
+    script(src="./assets/js/parallax.js")
+    script(src="./assets/js/hamburger.js")
+    //- script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMpt8DoMGTZgznlwnvnvw3XGwgNx-9Kms&callback=initMap")

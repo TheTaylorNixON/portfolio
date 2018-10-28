@@ -1,0 +1,97 @@
+.welcome-wrapper {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.background {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    // &-image {
+    //     display: block;
+    //     height: 100vh;
+    //     width: 100%;
+    // }
+    background: url(../images/water.jpg);
+    background-size: 110% 110%;
+}
+
+.authorization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
+    @include centered();
+}
+
+.authorization__info {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(18, 38, 32, 0.6);
+}
+
+.authorization__info__img {
+    border-radius: 50%;
+}
+
+.authorization__info__name {
+    padding-top: 20px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+}
+.authorization__info__info {
+    padding: 9px 0 35px 0;
+    opacity: 0.8;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.authorization__buttons {
+    width: 100%;
+    display: flex;
+}
+
+.authorization__button {
+    width: 33.3%;
+    text-align: center;
+    padding: 15px;
+    background-color: #6c9c5a;
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+    font-size: 16px;
+    &:hover {
+        background-color: #4e8839;
+    }
+    &--border {
+        border-right: 2px solid #dee3e7;;
+    }
+}
+
+.authorization__info__pic {
+    padding-top: 40px;
+    opacity: 2;
+}
+
+.authorization__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    margin: 20px;
+    transition: all .5s;
+    &:hover {
+        color: #4e8839;
+        background-color: #ffffff;
+    }
+}

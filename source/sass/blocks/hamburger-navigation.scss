@@ -1,0 +1,116 @@
+.hamburger-navigation {
+    // background-color:rgba(108, 156, 90, 0.9);
+    opacity: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -10;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hamburger-navigation.active {
+    opacity: 1;
+    z-index: 110;
+}
+body.active {
+    overflow: hidden;
+}
+
+.hamburger-navigation-nav {
+    height: 100vh;
+    position: relative;
+    &.active {
+        .navigation__list__item {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+            &:nth-of-type(2) {
+                animation-delay: .45s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: .55s;
+            }
+            &:nth-of-type(4) {
+                animation-delay: .65s;
+            }
+        }
+    }
+}
+
+.hamburger-navigation__list {
+    @include centered();
+    text-align: center;
+}
+
+.navigation__list__item {
+    margin-bottom: 50px;
+}
+
+.navigation-link {
+    color: #ffffff;
+    font-family: "Bernier", sans-serif;
+    font-size: 63px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.57px;
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        height: 5px;
+        width: 0;
+        background-color: #ffffff;
+        transition: all .5s;
+        opacity: 0;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -40px;        
+        height: 5px;
+        width: 0;
+        background-color: #ffffff;
+        transition: all .5s;
+        opacity: 0;
+    }
+    &:hover {
+        &:before, &:after {
+            width: 25px;
+            opacity: 1;
+        }
+    }
+}
+
+.hamburger-navigation::before, .hamburger-navigation::after {
+    content: '';
+    width: 50%;
+    background-color:rgba(108, 156, 90, 0.87);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+.hamburger-navigation::before {
+    left: -50%;
+}
+.hamburger-navigation.active::before {
+    left: 0;
+}
+.hamburger-navigation::after {
+    right: -50%;
+}
+.hamburger-navigation.active::after {
+    right: 0;
+}

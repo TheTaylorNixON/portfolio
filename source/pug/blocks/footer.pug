@@ -1,0 +1,23 @@
+mixin footer(item)
+    footer(class=`footer footer--${item}`)
+        .main-footer
+            .footer__left
+                p - Я бы исправил, но боюсь еще больше багов наплодить.
+                p - Ну не совсем бездельничал — хабр читал...
+                p - А обновить пробовали? Контрол-эф-пять.
+            .footer__middle
+                ul.middle-titles
+                    li.titles__items 
+                        a(href="./works.html") Мои работы
+                    li.titles__items 
+                        a(href="./about.html") Обо мне
+                    li.titles__items 
+                        a(href="./blog.html") Блог
+                    li.titles__items 
+                        a(href="./index.html") Авторизация                            
+                +socials({vk:'https://vk.com/', github:'https://github.com/TheTaylorNixON', in:'https://github.com/TheTaylorNixON'})
+            .footer__right
+                .right__text Всегда пишите код так, будто сопровождать <br> его будет склонный к насилию психопат, <br> который знает, где вы живете. <br> 
+                            em — Martin Golding
+        .second-footer
+            a.second-footer__text(href="https://github.com/TheTaylorNixON") © Артем Бочкарев | 2018
